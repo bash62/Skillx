@@ -1,3 +1,4 @@
+var helmet = require('helmet');
 const mongoose = require('mongoose');
 const express = require('express');
 const cors = require('cors');
@@ -20,7 +21,7 @@ mongoose.connect('mongodb+srv://skillzhost:KhKC3dSbWlpEoqMZ@viewers.d1nt3.gcp.mo
 
 
 //MiddleWare
-
+app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors({

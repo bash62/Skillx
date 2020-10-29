@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from "react";
 import Axios from 'axios';
+import NavBar from "./components/NavBar/NavBar";
 
 
 function App() {
@@ -49,11 +50,8 @@ function App() {
 
   return (
     <div className="App">
+        <NavBar />
         <div>
-
-          {
-            data ? <h1>{data.username}</h1>  : null
-          }
 
           <h1>Register</h1>
           <input placeholder="username" onChange={e => setRegisterUsername(e.target.value)}></input>
